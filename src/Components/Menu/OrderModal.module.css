@@ -1,0 +1,11 @@
+/* Improves responsiveness for smaller screens */
+.responsive-modal {
+  max-width: 90% !important;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .responsive-modal {
+    max-width: 500px !important;
+  }
+}

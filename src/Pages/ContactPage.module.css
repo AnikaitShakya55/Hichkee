@@ -1,43 +1,67 @@
 .contactPage {
   margin-top: 10vh;
-  text-align: center;
   padding: 20px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
 }
 
 .formContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  padding: 0 15px;
 }
 
 .form {
-  max-width: 500px;
   width: 100%;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  max-width: 600px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
 }
 
 .formGroup {
   margin-bottom: 20px;
+  text-align: left;
 }
 
 label {
   display: block;
   margin-bottom: 8px;
-  font-weight: bold;
+  font-weight: 600;
+  color: #333;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
   width: 100%;
-  padding: 12px; /* Increased padding for better input field appearance */
+  padding: 14px;
+  font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   box-sizing: border-box;
-  font-size: 16px; /* Increased font size for better readability */
+  transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff8c00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
 }
 
 textarea {
@@ -45,16 +69,33 @@ textarea {
 }
 
 .submitButton {
+  display: inline-block;
   background-color: #ff8c00;
   color: #fff;
-  padding: 12px 24px; /* Increased padding for better button appearance */
+  padding: 14px 28px;
+  font-size: 16px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  font-size: 16px; /* Increased font size for better button appearance */
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .submitButton:hover {
   background-color: #ff6f00;
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
 }

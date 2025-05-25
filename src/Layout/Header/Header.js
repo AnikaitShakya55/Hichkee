@@ -27,7 +27,7 @@ const Header = ({ cartShowHandler }) => {
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>
 
-        <ul className={`${classes.navItems} ${isOpen ? classes.open : ""}`}>
+        <div className={`${classes.navItems} ${isOpen ? classes.open : ""}`}>
           <li>
             <NavLink to="/home" onClick={() => setIsOpen(false)}>
               Home
@@ -52,7 +52,7 @@ const Header = ({ cartShowHandler }) => {
               <span className={classes.badge}>{ctx.totalQuantity}</span>
             </button>
           </li>
-        </ul>
+        </div>
 
         <div className={classes.desktopCart}>
           <button className={classes.cartButton} onClick={cartShowHandler}>
