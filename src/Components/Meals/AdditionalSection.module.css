@@ -1,0 +1,131 @@
+.additionalSection {
+  padding: 60px 20px;
+  background-color: #f7f4f8;
+  font-family: "Poppins", sans-serif;
+}
+
+.additionalSection h2 {
+  font-weight: 800;
+  font-size: 2.75rem;
+  color: #2e1a2e;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1.5px;
+}
+
+.specialtiesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.specialtyItem {
+  background-color: #fff;
+  border-radius: 16px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.specialtyItem:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 25px rgba(0, 0, 0, 0.15);
+}
+
+.specialtyItem img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.specialtyItem > div {
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+
+.specialtyItem h3 {
+  font-size: 1.5rem;
+  color: #3c1f3c;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.specialtyItem p {
+  font-size: 0.95rem;
+  color: #5c4b5c;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .additionalSection {
+    padding: 30px 10px;
+  }
+
+  .additionalSection h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+  }
+
+  .specialtiesGrid {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .specialtyItem {
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 20vh;
+  }
+
+  .specialtyItem img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .specialtyItem > div {
+    padding: 0.9rem 1rem 1.4rem;
+  }
+
+  .specialtyItem h3 {
+    font-size: 1.2rem;
+  }
+
+  .specialtyItem p {
+    font-size: 0.9rem;
+  }
+
+  .teamSection h2 {
+    font-size: 1.6rem;
+  }
+
+  .team {
+    gap: 20px;
+  }
+
+  .teamMember {
+    width: 100%;
+    max-width: 230px;
+  }
+
+  .teamMember img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .teamMember h3 {
+    font-size: 1rem;
+  }
+
+  .teamMember p {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,800;1,200;1,300;1,600&family=Protest+Riot&display=swap");
+.container {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 2rem;
+  flex-wrap: wrap;
+  background-color: #f7f4f8;
+}
+
+.leftContent,
+.rightContent {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.leftContent img,
+.rightContent img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.summary {
+  flex: 2;
+  min-width: 320px;
+  max-width: 700px;
+  text-align: center;
+  background-color: #fff;
+  color: #220516;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+}
+
+.summary h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.summary p {
+  font-family: "Poppins";
+}
+
+.videoContainer {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leftContent,
+  .rightContent,
+  .summary {
+    max-width: 100%;
+    flex: none;
+  }
+
+  .summary h2 {
+    font-size: 1.5rem;
+  }
+
+  .summary p {
+    font-size: 14px;
+  }
+}
