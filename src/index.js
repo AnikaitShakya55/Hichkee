@@ -4,13 +4,19 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CartProvider from "./Store/CartProvider";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import SnackbarComponent from "./Components/SnackBarComponent/SnackBarComponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <BrowserRouter>
-    <CartProvider>
-      <App />
-    </CartProvider>
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <CartProvider>
+        <App />
+        <SnackbarComponent />
+      </CartProvider>
+    </BrowserRouter>
+  </Provider>
 );

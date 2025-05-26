@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+.modal-open {
+  padding-right: 0 !important;
+}
+
 @media (min-width: 768px) {
   .responsive-modal {
     max-width: 500px !important;

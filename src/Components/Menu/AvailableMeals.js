@@ -3,6 +3,8 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import classes from "./AvailableMeals.module.css";
 import CartContext from "../../Store/CartContext";
+import { useDispatch } from "react-redux";
+import { showSnackbar } from "../../redux/snackbarSlice";
 
 const DUMMY_MEALS = [
   {
@@ -150,7 +152,8 @@ const DUMMY_MEALS = [
   },
 ];
 
-const AvailableMeal = () => {
+const AvailableMeal = ({ isLogin }) => {
+  const dispatch = useDispatch();
   const ctx = useContext(CartContext);
   const [filters, setFilters] = useState({
     cuisine: "",
@@ -165,6 +168,15 @@ const AvailableMeal = () => {
   };
 
   const handleAddToCart = (meal) => {
+    if (!isLogin) {
+      dispatch(
+        showSnackbar({
+          message: "Please Login to add items in the cart.",
+          severity: "error",
+        })
+      );
+      return;
+    }
     const quantity = quantityMap[meal.id] || 0;
     if (quantity > 0) {
       ctx.addItem({ ...meal, quantity });

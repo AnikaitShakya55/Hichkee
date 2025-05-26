@@ -1,0 +1,69 @@
+.auth-container {
+  margin-top: 5vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f4f8;
+}
+
+.auth-form {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 14px;
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-form h2 {
+  font-family: "Protest Riot", sans-serif;
+  margin-bottom: 1.5rem;
+  color: #220516;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  background-color: #220516;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-form button:hover {
+  background-color: #430d2c;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.toggle-text {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.toggle-text span {
+  color: #220516;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+  text-decoration: underline;
+}

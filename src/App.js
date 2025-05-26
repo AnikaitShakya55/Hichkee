@@ -8,8 +8,12 @@ import HomePage from "./Pages/HomePage";
 import MenuPage from "./Pages/MenuPage";
 import Footer from "./Layout/Footer/Footer";
 import ContactPage from "./Pages/ContactPage";
+import LoginPage from "./Pages/LoginPage";
+
+// const BACKEND_PORT = `http://localhost:5000`;
 
 const App = () => {
+  const token = localStorage.getItem("token");
   const location = useLocation();
   const [cartShow, setCartShow] = useState(false);
 
@@ -22,15 +26,16 @@ const App = () => {
 
   return (
     <Fragment>
-      <Header cartShowHandler={cartShowHandler} />
+      <Header cartShowHandler={cartShowHandler} isLogin={token} />
       <main>
         {cartShow && <Cart cartCloseHandler={cartCloseHandler} />}
 
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/home" element={<HomePage isLogin={token} />} />
+          <Route path="/menu" element={<MenuPage isLogin={token} />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </main>
       <Footer />

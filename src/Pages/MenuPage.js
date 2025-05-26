@@ -2,11 +2,11 @@ import React from "react";
 import AvailableMeal from "../Components/Menu/AvailableMeals";
 import OrderModal from "../Components/Menu/OrderModal";
 
-const MenuPage = () => {
+const MenuPage = ({isLogin}) => {
   return (
     <div>
       <OrderModal />
-      <AvailableMeal />
+      <AvailableMeal isLogin={isLogin} />
     </div>
   );
 };

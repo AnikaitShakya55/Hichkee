@@ -3,7 +3,7 @@ import MealsSummary from "../Components/Meals/MealSummary";
 import AdditionalSection from "../Components/Meals/AdditionalSection";
 import TeamSection from "../Components/Meals/TeamSection";
 
-const HomePage = () => {
+const HomePage = ({ token }) => {
   return (
     <div>
       <MealsSummary />
